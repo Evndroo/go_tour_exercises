@@ -20,7 +20,12 @@ func main() {
 
 	fmt.Println("File created successfully!")
 
+	// Note: stacked defers are executed in LIFO (Last In First Out) order, so the above code will print:
+	// File closed successfully 1!
+	// File closed successfully 2!
+	defer fmt.Println("File closed successfully 2!")
 	defer file.Close()
+	defer fmt.Println("File closed successfully 1!")
 
 	text, readError := os.ReadFile("filename.txt")
 
