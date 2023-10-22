@@ -1,6 +1,6 @@
 package main
 
-// fibonacci is a function that returns
+// Fibonacci is a function that returns
 // a function that returns an int.
 func Fibonacci() func() int {
 	previous, current := 0, 0

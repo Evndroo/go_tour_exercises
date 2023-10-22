@@ -53,13 +53,13 @@ func main() {
 
 	fmt.Println(geometry.ParseStringToWorldMap("I'm Learning Go!"))
 
-	fmt.Println("_____________________________________________________________________")
-	fmt.Println("_______ Fibonacci ____________")
-	fmt.Println("_____________________________________________________________________")
+	// fmt.Println("_____________________________________________________________________")
+	// fmt.Println("_______ Fibonacci ____________")
+	// fmt.Println("_____________________________________________________________________")
 
-	f := Fibonacci()
-	for i := 0; i < 10; i++ {
-		fmt.Println(f())
-	}
+	// f := Fibonacci()
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println(f())
+	// }
 
 }

@@ -29,12 +29,24 @@ func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
 
-func Geometry() {
+type Areas struct {
+	circle    float64
+	rectangle float64
+}
+
+func Geometry() Areas {
 	circle := Circle{radius: 5}
 	rectangle := Rectangle{width: 10, height: 5}
 
-	fmt.Println("circle area:", getArea(circle))
-	fmt.Println("rectangle area:", getArea(rectangle))
+	fmt.Println("circle area:", circle.area())
+	fmt.Println("rectangle area:", rectangle.area())
+
+	areas := Areas{
+		circle:    circle.area(),
+		rectangle: rectangle.area(),
+	}
+
+	return areas
 }
 
 type Shape interface {
@@ -55,8 +67,4 @@ func (r Rectangle) area() float64 {
 
 func (c Circle) area() float64 {
 	return math.Pi * math.Pow(c.radius, 2)
-}
-
-func getArea(s Shape) float64 {
-	return s.area()
 }
